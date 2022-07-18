@@ -125,6 +125,10 @@ section:not(.site-footer, .hero) {
     color: var(--clr-white);
 }
 
+.text-green {
+    color: var(--clr-green);
+}
+
 .fw-bold {
     font-weight: var(--fw-bold);
 }
@@ -569,6 +573,10 @@ a {
     background-color: #C99B67;
 }
 
+/*******************************
+    FOOTER
+********************************/
+
 .site-footer {
     padding: 45px 0;
     background-image: url("../images/hero-bg.jpg");
@@ -583,6 +591,65 @@ a {
 .social-item:nth-child(2) {
     margin: 0 30px;
 }
+
+/*******************************
+    MODAL
+********************************/
+.modal {
+    width: 560px;
+    padding: 0;
+    border: none;
+}
+
+.modal[open]{
+    animation: animate 0.5s forwards;
+    -webkit-animation: animate 0.5s forwards;
+}
+
+.modal.close{
+    animation: animateOut 0.8s forwards;
+    -webkit-animation: animateOut 0.8s forwards;
+}
+
+.modal-header {
+    width: 100%;
+    padding: 19px;
+    background-color: #C99B67;
+}
+
+.modal-title {
+    font-size: 44px;
+    line-height: 52px;
+    color: var(--clr-white);
+}
+
+.modal-wrapper {
+    padding: 20px;
+}
+
+.modal-wrapper-heading {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
+}
+
+.modal-desc {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
+    opacity: 0.8;
+}
+
+
+
+.modal-outer {
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+
 
 /*******************************
     ABOUT PAGE
@@ -707,6 +774,7 @@ a {
 .headquarters-item:nth-child(1)::before {
     background-image: url("../images/about/Combined\ Shape-2.svg");
 }
+
 .headquarters-item:nth-child(3)::before {
     background-image: url("../images/about/Combined\ Shape.svg");
     background-size: 120px 143px;
@@ -732,3 +800,41 @@ a {
     line-height: 28px;
     color: var(--clr-dark);
 }
+
+
+
+
+@keyframes animate {
+    0% {
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+}
+}
+
+@keyframes animateOut {
+    0% {
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+}
+    100%{
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+}
+}
+
