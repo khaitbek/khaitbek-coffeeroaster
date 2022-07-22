@@ -831,16 +831,17 @@ a {
 }
 
 .user-order-section{
-
-    background-image: url("../images/plan_bg.jpg");
-    background-size: cover;
+    
 }
 
 .user-order-wrapper {
     width: 100%;
     padding-block: 50px;
     padding-left: 50px;
-    padding-right: 124px;
+    background-image: url("../images/leaves/Vector-2.png"), url("../images/plan_bg.jpg");
+    background-size: 400px 300px, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: calc(50% - 700px), center center;
 }
 
 .order-inner-list {
@@ -857,11 +858,12 @@ a {
     text-transform: uppercase;
     color: #555555;
     cursor: pointer;
+    border-bottom: 3px dashed transparent;
 }
 
-.order-inner-item.active {
+.order-inner-item.active, .order-inner-item:hover {
     color: var(--clr-black);
-    border-bottom: 3px dashed var(--clr-coral);
+    border-color: var(--clr-coral);
 }
 
 .order-inner-item:not(:last-child) {
@@ -869,16 +871,27 @@ a {
 }
 
 .user-order {
-    width: 50%;
-    margin-left: auto;
+    width: 100%;
+    padding-left: 15%;
 }
 
 .order-list {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    width: 100%;
     margin-bottom: 100px;
     cursor: pointer;
+}
+
+.order-item{
+    width: 100%;
+    padding-bottom: 60px;
+    border-color: gold;
+}
+
+.order-item:nth-child(1){
+
+   
 }
 
 
@@ -913,6 +926,7 @@ details summary>* {
 .order-summary-details-list {
     display: flex;
 }
+
 
 .order-details-item:nth-child(2) {
     margin: 0 18px;
